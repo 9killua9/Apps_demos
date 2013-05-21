@@ -9,8 +9,8 @@ svg{width:100% !important;}
 	-o-transform: scale(1) translateY(-63px) translateX(-99px);
 	transform: scale(1) translateY(-63px) translateX(-99px);
 }
-.contenidoCorazon{margin-top:64px;-webkit-transition-property:-webkit-transform, all; -webkit-transition-duration:1s; -webkit-transition-timing-function:ease;}
-input{ background:#ffffff !important; width:40% !important; padding:4px !important; height:22px !important; border:1px solid #3b3b3b;}
+.contenidoCorazon{-webkit-transition-property:-webkit-transform, all; -webkit-transition-duration:1s; -webkit-transition-timing-function:ease;}
+input{ background:#ffffff !important; width:40% !important; padding:4px !important; height:22px !important; border:1px solid #3b3b3b; border-radius: 6px;font-size: 16px; text-align: center;}
 .contenidoCorazonTexto{font-size: 28px; font-family: arial; font-weight: bold; margin-left: 107px; width: 297px; text-align: center; margin-top: 153px; z-index: 1; color: #ffffff;}
 .estilosde{font-size: 23px; font-family: arial; font-weight: bold; margin-left: 120px !important; width: 247px; text-align: center; margin-top: 153px !important; z-index: 1; color: #ffffff;}
 .loop {
