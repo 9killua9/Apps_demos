@@ -3,10 +3,10 @@
 
 }
 
-.blink{background: url('../template/fondo/sprite-011.png') no-repeat 0px 0 transparent; width: 200px;height: 200px;}
-.triste{background: url('../template/fondo/sprite-041.png') no-repeat 0px 0 transparent; width: 200px;height: 200px;}
-.epa{background: url('../template/fondo/sprite-051.png') no-repeat 0px 0 transparent; width: 200px;height: 200px;}
-.muyTriste{background: url('../template/fondo/sprite-031.png') no-repeat 0px 0 transparent; width: 200px;height: 200px;}
+.blink{background: url('../template/fondo/sprite-0111.png') no-repeat 0px 0 transparent; width: 200px;height: 200px;}
+.triste{background: url('../template/fondo/sprite-0411.png') no-repeat 0px 0 transparent; width: 200px;height: 200px;}
+.epa{background: url('../template/fondo/sprite-0511.png') no-repeat 0px 0 transparent; width: 200px;height: 200px;}
+.muyTriste{background: url('../template/fondo/sprite-0311.png') no-repeat 0px 0 transparent; width: 200px;height: 200px;}
 
 .aja div{line-height: normal !important; margin:0 auto !important; font-family: tahoma; font-size: 22px;}
 .cargador{
