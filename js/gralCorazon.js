@@ -2,7 +2,12 @@
 
 /* Declaracion de variables
 ============================ */
-$(document).ready(function(){
+$(document).on("ready",function(){
+    
+});// Fin de ready
+
+function cargaAlgo()
+{
     $h = parseInt($(window).height());
     $w = parseInt($(window).width());
 
@@ -78,7 +83,7 @@ $(document).ready(function(){
                 corazonEpa();
             }
 
-            $("#coinciden").html('Coinciden en un <br>'+$fina).show();
+            $("#coinciden").html('Coinciden en un <br>'+$fina);
         }
         else
             alert("Complete los nombres para saber tu coincidencia.");
@@ -87,8 +92,7 @@ $(document).ready(function(){
         corazonBlink();
 
 
-});// Fin de ready
-
+}
 function corazonBlink(q)
 {
     if(q == "otro")
