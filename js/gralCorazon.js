@@ -82,7 +82,7 @@ function cargaAlgo()
                 $fina = "100%"
                 corazonEpa();
             }
-
+            alert($fina);
             $("#coinciden").html('Coinciden en un <br>'+$fina);
         }
         else
