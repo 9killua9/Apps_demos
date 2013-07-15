@@ -91,7 +91,6 @@ $(document).ready(function(){
 
 function corazonBlink(q)
 {
-    alert("entra");
     if(q == "otro")
     {
         $('#corazonito').destroy();
