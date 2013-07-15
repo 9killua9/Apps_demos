@@ -2,8 +2,8 @@
 
 /* Declaracion de variables
 ============================ */
-$(document).on("ready",function(){
-    
+$(document).ready(function(){
+
 });// Fin de ready
 
 function cargaAlgo()
@@ -89,9 +89,10 @@ function cargaAlgo()
             alert("Complete los nombres para saber tu coincidencia.");
     });
     
-        corazonBlink();
-
-
+        
+        $t = setTimeout(function(){
+                corazonBlink();
+            },1000);
 }
 function corazonBlink(q)
 {
@@ -109,8 +110,15 @@ function corazonBlink(q)
                             }, 
                             on_last_frame: function(obj) {
                                 obj.spStop(); // stop the animation on the last frame
+                                $t = setTimeout(function(){
+                                    if(q == "triste")
+                                        corazonTriste();
+                                    else
+                                        obj.spStart();
+                                },4000);
                             }
                         });
+    clearTimeout($t);
 }
 function corazonEpa()
 {
@@ -123,9 +131,13 @@ function corazonEpa()
                                 obj.spState(1); // change to state 1 (first row) on frame 1
                             }, 
                             on_last_frame: function(obj) {
-                                obj.spStop(); // stop the animation on the last frame
+                                obj.spStop(true); // stop the animation on the last frame
+                                /*$t = setTimeout(function(){
+                                        obj.spStart();
+                                },4000);*/
                             }
                         });
+    clearTimeout($t);
 }
 function corazonMuyTriste()
 {
@@ -154,9 +166,13 @@ function corazonTriste()
                             },
                             on_last_frame: function(obj) {
                                 obj.spStop(true); // stop the animation on the last frame
+                                /*$t = setTimeout(function(){
+                                    //corazonBlink('otro');
+                                },4000);*/
                             }
                             
                         });
+    clearTimeout($t);
 }
 /* Funciones de el framework para leer los resultados del ajax
 =================================================================== */
