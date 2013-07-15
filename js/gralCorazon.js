@@ -106,9 +106,6 @@ function corazonBlink(q)
                             }, 
                             on_last_frame: function(obj) {
                                 obj.spStop(); // stop the animation on the last frame
-                                $t = setTimeout(function(){
-                                    if(q == "triste")
-                                },4000);
                             }
                         });
 }
@@ -123,7 +120,7 @@ function corazonEpa()
                                 obj.spState(1); // change to state 1 (first row) on frame 1
                             }, 
                             on_last_frame: function(obj) {
-                                },4000);*/
+                                obj.spStop(); // stop the animation on the last frame
                             }
                         });
 }
