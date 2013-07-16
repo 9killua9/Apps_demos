@@ -11,7 +11,7 @@ svg{width:100% !important;}
 }
 .contenidoCorazon{-webkit-transition-property:-webkit-transform, all; -webkit-transition-duration:1s; -webkit-transition-timing-function:ease;}
 input{ background:#ffffff !important; width:40% !important; padding:4px !important; height:22px !important; border:1px solid #3b3b3b; border-radius: 6px;font-size: 16px; text-align: center;}
-.contenidoCorazonTexto{font-size: 28px; font-family: arial; font-weight: bold;width: 350px;margin:0 auto; text-align: center; z-index: 1; width:460px; color: #ffffff;}
+.contenidoCorazonTexto{font-size: 28px; font-family: arial; font-weight: bold;width: 430px !important;margin:0 auto; text-align: center; z-index: 1; width:460px; color: #ffffff;}
 .estilosde{font-size: 23px; font-family: arial; font-weight: bold; width: 247px; text-align: center; margin-top: 153px !important; z-index: 1; color: #ffffff;}
 .loop {
     -moz-animation:spin 3s infinite linear;
