@@ -6,6 +6,46 @@ $(document).ready(function(){
 
 });// Fin de ready
 
+function checkOrientation(){
+      var currMode = "";
+ 
+      switch(window.orientation){
+ 
+           case 0:
+           currMode = "portrait";
+           break;
+ 
+           case -90:
+            currMode = "landscape";
+            $h = parseInt($(window).height());
+            $w = parseInt($(window).width());
+
+            $(".contenedorCorazon").width($w);
+            $(".botonVerMas1").css({marginTop:$h-180})
+
+           break;
+ 
+           case 90:
+            currMode = "landscape";
+            $h = parseInt($(window).height());
+            $w = parseInt($(window).width());
+
+            $(".contenedorCorazon").width($w);
+            $(".botonVerMas1").css({marginTop:$h-180})
+           
+           break;
+ 
+           case 180:
+           currMode = "landscape";
+           break;
+     }
+     document.getElementsByTagName("body")[0].setAttribute("class", currMode);
+}
+
+window.onorientationchange = function(){
+      checkOrientation();
+}
+
 function cargaAlgo()
 {
     $h = parseInt($(window).height());
