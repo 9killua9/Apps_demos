@@ -8,21 +8,20 @@ function cargaAlgo()
     $( window ).on( "orientationchange", function( event ) {
       if(event.orientation == "portrait")
       {
-        alert("a")
         $h = parseInt($(window).height());
         $w = parseInt($(window).width());
         $(".contenedorCorazon").width($w);
         $(".botonVerMas1").css({marginTop:$h-67})
       }
-      else if(event.orientation == "landscape")
+      else
       {
         $h = parseInt($(window).height());
         $w = parseInt($(window).width());
 
         $(".contenedorCorazon").width($w);
-        $(".botonVerMas1")  .addClass("calcular")
-                            .css({marginTop:$h-67})
-                            .css({marginLeft:-$w});
+        $(".botonVerMas1").addClass("calcular")
+                          .css({marginTop:$h-67})
+                          .css({marginLeft:-$w});
 
       }
     });
