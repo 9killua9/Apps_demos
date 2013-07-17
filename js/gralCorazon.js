@@ -6,27 +6,17 @@ function cargaAlgo()
 {
 
     $( window ).on( "orientationchange", function( event ) {
-      console.log(event);
       if(event.orientation == "portrait")
       {
-        /*$h = parseInt($(window).height());
-        $w = parseInt($(window).width());
-        $(".contenedorCorazon").width($w);
-        $(".botonVerMas1").css({marginTop:$h-67})*/
-        
-        location.href="index.html";
+       setTimeout(function(){
+            location.href="index.html";
+        },600);
       }
       else
       {
-        /*$h = parseInt($(window).height());
-        $w = parseInt($(window).width());
-
-        $(".contenedorCorazon").width($w);
-        $(".botonVerMas1").addClass("calcular")
-                          .css({marginTop:$h-67})
-                          .css({marginLeft:-$w});
-*/      
-        location.href="index.html";
+        setTimeout(function(){
+            location.href="index.html";
+        },600);
       }
     });
 
