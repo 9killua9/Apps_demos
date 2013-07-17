@@ -6,6 +6,7 @@ function cargaAlgo()
 {
 
     $( window ).on( "orientationchange", function( event ) {
+      alert(event);
       if(event.orientation == "portrait")
       {
         $h = parseInt($(window).height());
