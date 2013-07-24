@@ -24,80 +24,107 @@ function cargaAlgo()
     $w = parseInt($(window).width());
 
     $(".contenedorCorazon").width($w);
-    $(".botonVerMas1").css({marginTop:$h-67}).css({marginLeft:-$w});
+    $(".botonVerMas1").css({marginTop:$h-508});
 
     $(".botonVerMas1").click(function(){
 
-        n1 = $("input[name=nombre1]").val();
-        n2 = $("input[name=nombre2]").val();
-        if(n1 != "" && n2 != "")
+       
+        $id = $(this).prop("id");
+
+        if($id == "nuevo")
         {
-            var porcent = new Array();
-
-            porcent[0]  = "10%";
-            porcent[1]  = "21%";
-            porcent[2]  = "35%";
-            porcent[3]  = "40%";
-            porcent[4]  = "51%";
-            porcent[5]  = "66%";
-            porcent[6]  = "75%";
-            porcent[7]  = "85%";
-            porcent[7]  = "93%";
-            porcent[8]  = "100%";
-            porcent[10] = "70%";
-
-            $rand = Math.floor(Math.random()*10);
-
-            $fina = porcent[$rand];
-            
-            if ($fina != undefined)
-            {
-                switch($fina)
-                {
-                    case "10%":
-                        corazonMuyTriste();
-                    break;
-                    case "21%":
-                        corazonMuyTriste();
-                    break;
-                    case "35%":
-                        corazonTriste();
-                    break;
-                    case "40%":
-                        corazonTriste();
-                    break;
-                    case "51%":
-                        corazonBlink('otro');
-                    break;
-                    case "66%":
-                        corazonBlink('otro');
-                    break;
-                    case "75%":
-                        corazonEpa();
-                    break;
-                    case "85%":
-                        corazonEpa();
-                    break;
-                    case "93%":
-                        corazonEpa();
-                    break;
-                    case "100%":
-                        corazonEpa();
-                    break;
-                    case "70%":
-                        corazonEpa();
-                    break;
-                }
-            }
-            else
-            {
-                $fina = "100%"
-                corazonEpa();
-            }
-            $("#coinciden").html('Coinciden en un <br>'+$fina);
+            $("input[name=nombre1]").val("");
+            $("input[name=nombre2]").val("");
+            $("#coinciden").html("");
+            $(this).html("Calcular");
+            $(this).prop("id","nada");
         }
         else
-            alert("Complete los nombres para saber tu coincidencia.");
+        {
+            
+            n1 = $("input[name=nombre1]").val();
+            n2 = $("input[name=nombre2]").val();
+
+            if(n1 != "" && n2 != "")
+            {
+                $(".loaad").fadeIn("fast",function(){
+                    $(".ball").css("-webkit-animation","loading 1s linear infinite");
+                });
+                
+                var porcent = new Array();
+
+                porcent[0]  = "10%";
+                porcent[1]  = "21%";
+                porcent[2]  = "35%";
+                porcent[3]  = "40%";
+                porcent[4]  = "51%";
+                porcent[5]  = "66%";
+                porcent[6]  = "75%";
+                porcent[7]  = "85%";
+                porcent[7]  = "93%";
+                porcent[8]  = "100%";
+                porcent[10] = "70%";
+
+                $rand = Math.floor(Math.random()*10);
+
+                $fina = porcent[$rand];
+                
+                if ($fina != undefined)
+                {
+                    switch($fina)
+                    {
+                        case "10%":
+                            corazonMuyTriste();
+                        break;
+                        case "21%":
+                            corazonMuyTriste();
+                        break;
+                        case "35%":
+                            corazonTriste();
+                        break;
+                        case "40%":
+                            corazonTriste();
+                        break;
+                        case "51%":
+                            corazonBlink('otro');
+                        break;
+                        case "66%":
+                            corazonBlink('otro');
+                        break;
+                        case "75%":
+                            corazonEpa();
+                        break;
+                        case "85%":
+                            corazonEpa();
+                        break;
+                        case "93%":
+                            corazonEpa();
+                        break;
+                        case "100%":
+                            corazonEpa();
+                        break;
+                        case "70%":
+                            corazonEpa();
+                        break;
+                    }
+                }
+                else
+                {
+                    $fina = "100%"
+                    corazonEpa();
+                }
+                
+                setTimeout(function(){
+                    $(".loaad").fadeOut("fast",function(){
+                        $("#coinciden").html('Su compatibilidad es de un : '+$fina);
+                    });
+                },"1000")
+                $(".botonVerMas1").html('Volver a calcular').prop("id","nuevo");
+            }
+            else
+                alert("Complete los nombres para saber tu coincidencia.");
+        
+        } // fin else
     });
     
         

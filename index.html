@@ -26,23 +26,44 @@
     <br>
     <div class="contenedorCorazon">
           <form name="compara" class="floatLeft w100" style="z-index:4;margin-bottom:42px;">
-              <div class="floatLeft" style="margin-left:22px;margin-bottom:2px;text-transform:uppercase; color:#3b3b3b; font-size:0.7em;font-family:tahoma;font-weight:bold;">Ingresa tu nombre</div>
-              <div class="floatRight" style="margin-right:15px;margin-bottom:2px;text-transform:uppercase; color:#3b3b3b; font-size:0.7em;font-family:tahoma;font-weight:bold;">Ingresa su nombre</div>
+              <input type="text" name="nombre1" placeholder="Maxi" class="floatLeft" style="margin-bottom:13px;"/>
+              
               <div class="clearBoth"></div>
-              <input type="text" name="nombre1" placeholder="Tu nombre" class="floatLeft"/>
-              <input type="text" name="nombre2" placeholder="Su nombre" class="floatRight"/>
+              
+              <input type="text" name="nombre2" placeholder="Mariana" class="floatLeft"/>
           </form>
 
           <div class="margin0auto" style="width:310px;">
-            <div class="positionAbsolute contenidoCorazonTexto" style="margin-top:2em !important;">
-              <div class="floatLeft textAlignCenter" id="coinciden" style="margin-top: 70px;font-size: 25px; color: #3b3b3b;"></div>
-
-              <div class="floatRight blink" id="corazonito" style="margin-left: -70px; margin-right: 64px;"></div>
-            </div>
+              <div class="floatRight blink" id="corazonito" style="margin-left: -70px; margin-right: 164px;"></div>
           </div>
-
-          <div class="margin0auto" style="width:260px;">
-            <div class="floatLeft botonVerMas1 calcular" style="font-size:1.3em;">
+          <div class="clearBoth"></div>
+          <div class="floatLeft textAlignCenter" id="coinciden" style="margin-top: 70px; font-size: 25px; color: #ffffff; width: 100%; font-family: tahoma; font-size: 2em; height: 50px;"></div>
+          <div class="floatLeft oculto loaad" style="margin-top:-60px;margin-bottom:-60px;">
+            <ul id="progress">
+              <li>
+              <div id="layer1" class="ball"></div> <!-- layer1 control delay animation / ball is effect -->
+              <div id="layer7" class="pulse"></div> <!-- layer7 control delay animation / pulse is effect  -->
+              </li>
+              <li>
+              <div id="layer2" class="ball"></div>
+              <div id="layer8" class="pulse"></div>
+              </li>
+              <li>
+              <div id="layer3" class="ball"></div>
+              <div id="layer9" class="pulse"></div>
+              </li>
+              <li>
+              <div id="layer4" class="ball"></div>
+              <div id="layer10" class="pulse"></div>
+              </li>
+              <li>
+              <div id="layer5" class="ball"></div>
+              <div id="layer11" class="pulse"></div>
+              </li>
+          </ul>
+          </div>
+          <div class="margin0auto w100" style="">
+            <div class="floatLeft botonVerMas1 calcular w100 textAlignCenter" style="font-size:1.3em;">
               Calcular
             </div>
           </div>
