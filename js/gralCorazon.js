@@ -9,13 +9,13 @@ function cargaAlgo()
       if(event.orientation == "portrait")
       {
        setTimeout(function(){
-            $(".contenedorCorazon").css("-webkit-transform","rotate(0deg)")
+            $(".contenedorCorazon").css("-webkit-transform","rotate(0deg)").css("margin-left","0px");
         },600);
       }
       else
       {
         setTimeout(function(){
-            $(".contenedorCorazon").css("-webkit-transform","rotate(-90deg)")
+            $(".contenedorCorazon").css("-webkit-transform","rotate(-90deg)").css("margin-left","-16px");
         },600);
       }
     });
