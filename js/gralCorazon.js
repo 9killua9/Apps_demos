@@ -9,13 +9,13 @@ function cargaAlgo()
       if(event.orientation == "portrait")
       {
        setTimeout(function(){
-            location.href="index.html";
+            $(".contenedorCorazon").css("-webkit-transform","rotate(0deg)")
         },600);
       }
       else
       {
         setTimeout(function(){
-            location.href="index.html";
+            $(".contenedorCorazon").css("-webkit-transform","rotate(-90deg)")
         },600);
       }
     });
@@ -50,7 +50,7 @@ function cargaAlgo()
                 $(".loaad").fadeIn("fast",function(){
                     $(".ball").css("-webkit-animation","loading 1s linear infinite");
                 });
-                
+
                 var porcent = new Array();
 
                 porcent[0]  = "10%";
