@@ -23,8 +23,8 @@ function cargaAlgo()
     $h = parseInt($(window).height());
     $w = parseInt($(window).width());
 
-    $(".contenedorCorazon").width($w);
-    $(".botonVerMas1").css({marginTop:$h-508});
+    $(".contenedorCorazon").width($w-180).css("margin","0 auto");
+    $(".conteBotVerMas").css({marginTop:$h-73, "position":"absolute"});
 
     $(".botonVerMas1").click(function(){
 
@@ -86,25 +86,25 @@ function cargaAlgo()
                             corazonTriste();
                         break;
                         case "51%":
-                            corazonBlink('otro');
+                            corazonEpa('otro');
                         break;
                         case "66%":
-                            corazonBlink('otro');
+                            corazonEpa('otro');
                         break;
                         case "75%":
-                            corazonEpa();
+                            corazonFeliz();
                         break;
                         case "85%":
-                            corazonEpa();
+                            corazonMuyFeliz();
                         break;
                         case "93%":
-                            corazonEpa();
+                            corazonMuyFeliz();
                         break;
                         case "100%":
-                            corazonEpa();
+                            corazonMuyFeliz();
                         break;
                         case "70%":
-                            corazonEpa();
+                            corazonFeliz();
                         break;
                     }
                 }
@@ -116,10 +116,9 @@ function cargaAlgo()
                 
                 setTimeout(function(){
                     $(".loaad").fadeOut("fast",function(){
-                        $("#coinciden").html('Su compatibilidad es de un : '+$fina);
+                        $(".botonVerMas1").html($fina+' - Volver a calcular').prop("id","nuevo");
                     });
-                },"1000")
-                $(".botonVerMas1").html('Volver a calcular').prop("id","nuevo");
+                },"1000");
             }
             else
                 alert("Complete los nombres para saber tu coincidencia.");
@@ -137,12 +136,12 @@ function corazonBlink(q)
     if(q == "otro")
     {
         $('#corazonito').destroy();
-        $('#corazonito').removeClass("muyTriste").removeClass("triste").removeClass("epa").addClass("blink");
+        $('#corazonito').removeClass("muyTriste").removeClass("muyFeliz").removeClass("feliz").removeClass("epa").removeClass("triste").addClass("blink");
     }
     
     $('#corazonito').sprite({
                             fps: 9, 
-                            no_of_frames: 11, 
+                            no_of_frames: 22,
                             on_first_frame: function(obj) {
                                 obj.spState(1); // change to state 1 (first row) on frame 1
                             }, 
@@ -161,7 +160,7 @@ function corazonBlink(q)
 function corazonEpa()
 {
     $('#corazonito').destroy();
-    $('#corazonito').removeClass("muyTriste").removeClass("triste").removeClass("blink").addClass("epa");
+    $('#corazonito').removeClass("muyTriste").removeClass("muyFeliz").removeClass("feliz").removeClass("blink").removeClass("triste").addClass("epa");
     $('#corazonito').sprite({
                             fps: 9, 
                             no_of_frames: 32, 
@@ -170,9 +169,8 @@ function corazonEpa()
                             }, 
                             on_last_frame: function(obj) {
                                 obj.spStop(true); // stop the animation on the last frame
-                                /*$t = setTimeout(function(){
-                                        obj.spStart();
-                                },4000);*/
+                                obj.spState(); // change to state 1 (first row) on frame 1
+                                obj.spStart(); // change to state 1 (first row) on frame 1
                             }
                         });
     clearTimeout($t);
@@ -180,22 +178,24 @@ function corazonEpa()
 function corazonMuyTriste()
 {
     $('#corazonito').destroy();
-    $('#corazonito').removeClass("epa").removeClass("triste").removeClass("blink").addClass("muyTriste");
+    $('#corazonito').removeClass("epa").removeClass("muyFeliz").removeClass("feliz").removeClass("blink").removeClass("triste").addClass("muyTriste");
     $('#corazonito').sprite({
                             fps: 9, 
-                            no_of_frames: 40,
+                            no_of_frames: 36,
                             on_first_frame: function(obj) {
                                 obj.spState(); // change to state 1 (first row) on frame 1
                             }, 
                             on_last_frame: function(obj) {
-                                obj.spToggle();
+                                obj.spStop(true); // stop the animation on the last frame
+                                obj.spState(); // change to state 1 (first row) on frame 1
+                                obj.spStart(); // change to state 1 (first row) on frame 1
                             }
                         });
 }
 function corazonTriste()
 {
     $('#corazonito').destroy();
-    $('#corazonito').removeClass("muyTriste").removeClass("epa").removeClass("blink").addClass("triste");
+    $('#corazonito').removeClass("epa").removeClass("muyFeliz").removeClass("feliz").removeClass("blink").removeClass("muyTriste").addClass("triste");
     $('#corazonito').sprite({
                             fps: 9, 
                             no_of_frames: 25, 
@@ -204,13 +204,47 @@ function corazonTriste()
                             },
                             on_last_frame: function(obj) {
                                 obj.spStop(true); // stop the animation on the last frame
-                                /*$t = setTimeout(function(){
-                                    //corazonBlink('otro');
-                                },4000);*/
+                                obj.spState(); // change to state 1 (first row) on frame 1
+                                obj.spStart(); // change to state 1 (first row) on frame 1
                             }
                             
                         });
     clearTimeout($t);
+}
+function corazonFeliz()
+{
+    $('#corazonito').destroy();
+    $('#corazonito').removeClass("epa").removeClass("muyFeliz").removeClass("triste").removeClass("blink").removeClass("muyTriste").addClass("feliz");
+    $('#corazonito').sprite({
+                            fps: 9, 
+                            no_of_frames: 27,
+                            on_first_frame: function(obj) {
+                                obj.spState(); // change to state 1 (first row) on frame 1
+                            }, 
+                            on_last_frame: function(obj) {
+                                obj.spStop(); // change to state 1 (first row) on frame 1
+                                obj.spState(); // change to state 1 (first row) on frame 1
+                                obj.spStart(); // change to state 1 (first row) on frame 1
+                            }
+                        });
+}
+
+function corazonMuyFeliz()
+{
+    $('#corazonito').destroy();
+    $('#corazonito').removeClass("epa").removeClass("feliz").removeClass("triste").removeClass("blink").removeClass("muyTriste").addClass("muyFeliz");
+    $('#corazonito').sprite({
+                            fps: 4,
+                            no_of_frames: 26,
+                            on_first_frame: function(obj) {
+                                obj.spState(); // change to state 1 (first row) on frame 1
+                            }, 
+                            on_last_frame: function(obj) {
+                                obj.spStop(true); // stop the animation on the last frame
+                                obj.spState(); // change to state 1 (first row) on frame 1
+                                obj.spStart(); // change to state 1 (first row) on frame 1
+                            }
+                        });
 }
 /* Funciones de el framework para leer los resultados del ajax
 =================================================================== */

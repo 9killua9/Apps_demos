@@ -21,20 +21,20 @@
   <script type="text/javascript" src="js/jquery.spritely-0.1.js"></script>
 </head>
 
-<body onload="cargaAlgo()">
+<body onload="cargaAlgo()" style="overflow:auto !important;">
     <!-- <div class="volver botonVerMas1">volver</div> -->
     <br>
     <div class="contenedorCorazon">
           <form name="compara" class="floatLeft w100" style="z-index:4;margin-bottom:42px;">
-              <input type="text" name="nombre1" placeholder="Maxi" class="floatLeft" style="margin-bottom:13px; margin-left:5px;width:96% !important"/>
+              <input type="text" name="nombre1" placeholder="Tu nombre" class="floatLeft" style="height:35px !important;font-size:27px !important; margin-bottom:13px;width:98% !important"/>
               
               <div class="clearBoth"></div>
               
-              <input type="text" name="nombre2" placeholder="Mariana" class="floatLeft" style="margin-left:5px;width:96% !important"/>
+              <input type="text" name="nombre2" placeholder="Su nombre" class="floatLeft" style="height:35px !important;font-size:27px !important;width:98% !important"/>
           </form>
 
-          <div class="margin0auto" style="width:310px;">
-              <div class="floatRight blink" id="corazonito" style="margin-right: 80px;"></div>
+          <div class="margin0auto" style="width:520px; overflow:hidden;">
+              <div class="floatRight blink" id="corazonito" style="margin-top:-80px;"></div>
           </div>
           <div class="clearBoth"></div>
           <div class="floatLeft textAlignCenter" id="coinciden" style="margin-top: 70px; font-size: 25px; color: #ffffff; width: 100%; font-family: tahoma; font-size: 2em; height: 50px;"></div>
@@ -62,8 +62,8 @@
               </li>
           </ul>
           </div>
-          <div class="margin0auto w100" style="">
-            <div class="floatLeft botonVerMas1 calcular textAlignCenter" style="font-size:1.3em; width:97% !important;">
+          <div class="margin0auto w100 conteBotVerMas" style="top:0;">
+            <div class="floatLeft botonVerMas1 calcular textAlignCenter" style="font-size:1.3em; width:60% !important;padding:19px !important;">
               Calcular
             </div>
           </div>
