@@ -22,19 +22,31 @@
 </head>
 
 <body onload="cargaAlgo()" style="overflow:auto !important;">
+    <div class="positionAbsolute w100 h100" style="background-color:#000000;z-index:200;" id="entrada">
+      <img src="template/fondo/logo.jpg" id="logu" />
+    </div>
+    <a href="#" 
+        onclick="
+          window.open(
+            'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('flyen.com.ar'), 
+            'facebook-share-dialog', 
+            'width=626,height=436'); 
+          return false;">
+        Share on Facebook
+    </a>
     <!-- <div class="volver botonVerMas1">volver</div> -->
     <br>
     <div class="contenedorCorazon">
           <form name="compara" class="floatLeft w100" style="z-index:4;margin-bottom:42px;">
-              <input type="text" name="nombre1" placeholder="Tu nombre" class="floatLeft" style="height:35px !important;font-size:27px !important; margin-bottom:13px;width:98% !important"/>
+              <input type="text" name="nombre1" value="lean" placeholder="Tu nombre" class="floatLeft" style="height:35px !important;font-size:27px !important; margin-bottom:13px;width:98% !important"/>
               
               <div class="clearBoth"></div>
               
-              <input type="text" name="nombre2" placeholder="Su nombre" class="floatLeft" style="height:35px !important;font-size:27px !important;width:98% !important"/>
+              <input type="text" name="nombre2" value="lean" placeholder="Su nombre" class="floatLeft" style="height:35px !important;font-size:27px !important;width:98% !important"/>
           </form>
 
-          <div class="margin0auto" style="width:520px; overflow:hidden;">
-              <div class="floatRight blink" id="corazonito" style="margin-top:-80px;"></div>
+          <div class="margin0auto" style="width:210px; overflow:hidden;">
+              <div class="floatRight blink" id="corazonito" style="margin-top:-40px;"></div>
           </div>
           <div class="clearBoth"></div>
           <div class="floatLeft textAlignCenter" id="coinciden" style="margin-top: 70px; font-size: 25px; color: #ffffff; width: 100%; font-family: tahoma; font-size: 2em; height: 50px;"></div>
