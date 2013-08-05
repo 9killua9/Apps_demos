@@ -12,11 +12,22 @@ $(document).ready(function(){
 
 function cargaAlgo()
 {
-    $("#logu").addClass("lole"); setTimeout(function(){$("#entrada").fadeOut("slow"); },600);
+    setTimeout(function(){$("#logu").addClass("lole"); setTimeout(function(){$("#entrada").fadeOut("slow"); },600); },800);
     $( window ).on( "orientationchange", function( event ) {if(event.orientation == "portrait") {setTimeout(function(){$(".contenedorCorazon").css("-webkit-transform","rotate(0deg)").css("margin-left","0px"); },600); } else {setTimeout(function(){$(".contenedorCorazon").css("-webkit-transform","rotate(-90deg)").css("margin-left","-16px"); },600); } });
     $(".contenedorCorazon").width($w-180).css("margin","0 auto");
     $(".conteBotVerMas").css({marginTop:$h-73, "position":"absolute"});
-    $(".botonVerMas1").click(function(){$id = $(this).prop("id"); if($id == "nuevo") {corazonBlink("otro"); $("input[name=nombre1]").val(""); $("input[name=nombre2]").val(""); $("#coinciden").html(""); $(this).html("Calcular"); $(this).prop("id","nada"); } else {n1 = $("input[name=nombre1]").val(); n2 = $("input[name=nombre2]").val(); if(n1 != "" && n2 != "") {$(".loaad").fadeIn("fast",function(){$(".ball").css("-webkit-animation","loading 1s linear infinite"); }); var porcent = new Array(); porcent[0]  = "10%"; porcent[1]  = "21%"; porcent[2]  = "35%"; porcent[3]  = "40%"; porcent[4]  = "51%"; porcent[5]  = "66%"; porcent[6]  = "75%"; porcent[7]  = "85%"; porcent[7]  = "93%"; porcent[8]  = "100%"; porcent[10] = "70%"; $rand = Math.floor(Math.random()*10); $fina = porcent[$rand]; if ($fina != undefined) {switch($fina) {case "10%": corazonMuyTriste(); break; case "21%": corazonMuyTriste(); break; case "35%": corazonTriste(); break; case "40%": corazonTriste(); break; case "51%": corazonEpa('otro'); break; case "66%": corazonEpa('otro'); break; case "75%": corazonFeliz(); break; case "85%": corazonMuyFeliz(); break; case "93%": corazonMuyFeliz(); break; case "100%": corazonMuyFeliz(); break; case "70%": corazonFeliz(); break; } } else {$fina = "100%"; corazonEpa(); } setTimeout(function(){$(".loaad").fadeOut("fast",function(){$(".botonVerMas1").html($fina+' - Volver a calcular').prop("id","nuevo"); }); },"1000"); } else alert("Complete los nombres para saber tu coincidencia."); } }); $t = setTimeout(function(){corazonBlink(); },1000); 
+    $(".botonVerMas1").click(function(){
+        $id = $(this).prop("id"); 
+        if($id == "nuevo") {
+            $("#compartirFbc").hide();
+            corazonBlink("otro"); 
+            $("input[name=nombre1]").val("").fadeIn("fast"); 
+            $("input[name=nombre2]").val("").fadeIn("fast"); $("#coinciden").html(""); $(this).html("Calcular"); $(this).prop("id","nada"); } 
+            else {
+                $("input[name=nombre1]").hide(); 
+                $("input[name=nombre2]").hide();
+                $("#compartirFbc").show();
+                n1 = $("input[name=nombre1]").val(); n2 = $("input[name=nombre2]").val(); if(n1 != "" && n2 != "") {$(".loaad").fadeIn("fast",function(){$(".ball").css("-webkit-animation","loading 1s linear infinite"); }); var porcent = new Array(); porcent[0]  = "10%"; porcent[1]  = "21%"; porcent[2]  = "35%"; porcent[3]  = "40%"; porcent[4]  = "51%"; porcent[5]  = "66%"; porcent[6]  = "75%"; porcent[7]  = "85%"; porcent[7]  = "93%"; porcent[8]  = "100%"; porcent[10] = "70%"; $rand = Math.floor(Math.random()*10); $fina = porcent[$rand]; if ($fina != undefined) {switch($fina) {case "10%": corazonMuyTriste(); break; case "21%": corazonMuyTriste(); break; case "35%": corazonTriste(); break; case "40%": corazonTriste(); break; case "51%": corazonEpa('otro'); break; case "66%": corazonEpa('otro'); break; case "75%": corazonFeliz(); break; case "85%": corazonMuyFeliz(); break; case "93%": corazonMuyFeliz(); break; case "100%": corazonMuyFeliz(); break; case "70%": corazonFeliz(); break; } } else {$fina = "100%"; corazonEpa(); } setTimeout(function(){$(".loaad").fadeOut("fast",function(){$(".botonVerMas1").html($fina+' - Volver a calcular').prop("id","nuevo"); }); },"1000"); } else alert("Complete los nombres para saber tu coincidencia."); } }); $t = setTimeout(function(){corazonBlink(); },1000); 
 }
 
 function abreFbc()
