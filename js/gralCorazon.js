@@ -5,15 +5,15 @@
 $h = parseInt($(window).height());
 $w = parseInt($(window).width());
 
-$(document).ready(function(){
+$(document).on('ready', function(){
     $("#logu").css({marginTop:($h/2)-35, marginLeft:($w/2)-196});
     $(".w100").css("width",$w-180);
-    $(".conteBotVerMas").width($w-12);
+    $(".conteBotVerMas, input").width($w-12);
 });
 
 function cargaAlgoIndex()
 {
-    setTimeout(function(){$("#logu").addClass("lole"); setTimeout(function(){$("#entrada").fadeOut("slow",function(){location.href="juego.html"}); },600); },800);
+    setTimeout(function(){$("#logu").addClass("lole"); setTimeout(function(){$("#entrada").fadeOut("slow",function(){location.href="juego.html"}); },600); },2000);
     $( window ).on( "orientationchange", function( event ) {if(event.orientation == "portrait") {setTimeout(function(){
             location.href="index.html";//$(".contenedorCorazon").css("-webkit-transform","rotate(0deg)").css("margin-left","0px"); 
         },600); } else {setTimeout(function(){
