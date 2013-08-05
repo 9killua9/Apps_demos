@@ -21,66 +21,9 @@
   <script type="text/javascript" src="js/jquery.spritely-0.1.js"></script>
 </head>
 
-<body onload="cargaAlgo()" style="overflow:auto !important;">
+<body onload="cargaAlgoIndex()" style="overflow:auto !important;">
     <div class="positionAbsolute w100 h100" style="background-color:#000000;z-index:200;" id="entrada">
       <img src="template/fondo/logo.jpg" id="logu" />
-    </div>
-    <a href="#"
-      class="oculto" 
-      id="compartirFbc"  
-      onclick="
-        window.open(
-          'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(http://www.fly-en.com), 
-          'facebook-share-dialog', 
-          'width=626,height=436'); 
-        return false;">
-      <img src="template/fondo/share.png" alt="Compartir en facebook" />
-    </a>
-    <!-- <div class="volver botonVerMas1">volver</div> -->
-    <br>
-    <div class="contenedorCorazon">
-          <form name="compara" class="floatLeft w100" style="z-index:4;margin-bottom:42px;">
-              <input type="text" name="nombre1" value="" placeholder="Ingresa tu nombre" class="floatLeft" style="height:35px !important;font-size:27px !important; margin-bottom:13px;width:98% !important"/>
-              
-              <div class="clearBoth"></div>
-              
-              <input type="text" name="nombre2" value="" placeholder="Ingresa su nombre" class="floatLeft" style="height:35px !important;font-size:27px !important;width:98% !important"/>
-          </form>
-
-          <div class="margin0auto" style="width:210px; overflow:hidden;">
-              <div class="floatRight blink" id="corazonito" style="margin-top:-40px;"></div>
-          </div>
-          <div class="clearBoth"></div>
-          <div class="floatLeft textAlignCenter" id="coinciden" style="margin-top: 70px; font-size: 25px; color: #ffffff; width: 100%; font-family: tahoma; font-size: 2em; height: 50px;"></div>
-          <div class="floatLeft oculto loaad" style="margin-top:-60px;margin-bottom:-60px;">
-            <ul id="progress">
-              <li>
-              <div id="layer1" class="ball"></div> <!-- layer1 control delay animation / ball is effect -->
-              <div id="layer7" class="pulse"></div> <!-- layer7 control delay animation / pulse is effect  -->
-              </li>
-              <li>
-              <div id="layer2" class="ball"></div>
-              <div id="layer8" class="pulse"></div>
-              </li>
-              <li>
-              <div id="layer3" class="ball"></div>
-              <div id="layer9" class="pulse"></div>
-              </li>
-              <li>
-              <div id="layer4" class="ball"></div>
-              <div id="layer10" class="pulse"></div>
-              </li>
-              <li>
-              <div id="layer5" class="ball"></div>
-              <div id="layer11" class="pulse"></div>
-              </li>
-          </ul>
-          </div>
-          <div class="margin0auto w100 conteBotVerMas" style="top:0;">
-            <div class="floatLeft botonVerMas1 calcular textAlignCenter" style="font-size:1.3em; width:60% !important;padding:19px !important;">
-              Calcular
-            </div>
-          </div>
     </div>
 </body>
 </html>

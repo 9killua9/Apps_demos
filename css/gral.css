@@ -56,7 +56,6 @@ q:before, q:after { content: ""; content: none; }
     /* cursores */
 .cursorPointer, .cursor{cursor:pointer;}
 .oculto, .escondido{display:none;}
-.w100{width:100%;}
 .h100{height:100%;}
 .noBorde,.borderNone{border:none !important;}
      /* igualdad de inputs */
