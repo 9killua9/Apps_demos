@@ -13,7 +13,11 @@ $(document).ready(function(){
 function cargaAlgo()
 {
     setTimeout(function(){$("#logu").addClass("lole"); setTimeout(function(){$("#entrada").fadeOut("slow"); },600); },800);
-    $( window ).on( "orientationchange", function( event ) {if(event.orientation == "portrait") {setTimeout(function(){$(".contenedorCorazon").css("-webkit-transform","rotate(0deg)").css("margin-left","0px"); },600); } else {setTimeout(function(){$(".contenedorCorazon").css("-webkit-transform","rotate(-90deg)").css("margin-left","-16px"); },600); } });
+    $( window ).on( "orientationchange", function( event ) {if(event.orientation == "portrait") {setTimeout(function(){
+            location.href="index.html";//$(".contenedorCorazon").css("-webkit-transform","rotate(0deg)").css("margin-left","0px"); 
+        },600); } else {setTimeout(function(){
+            location.href="index.html";//$(".contenedorCorazon").css("-webkit-transform","rotate(-90deg)").css("margin-left","-16px"); 
+        },600); } });
     $(".contenedorCorazon").width($w-180).css("margin","0 auto");
     $(".conteBotVerMas").css({marginTop:$h-73, "position":"absolute"});
     $(".botonVerMas1").click(function(){
