@@ -8,6 +8,7 @@ $w = parseInt($(window).width());
 $(document).ready(function(){
     $("#logu").css({marginTop:($h/2)-35, marginLeft:($w/2)-196});
     $(".w100").css("width",$w-180);
+    $(".conteBotVerMas").width($w-12);
 });
 
 function cargaAlgoIndex()
