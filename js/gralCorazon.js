@@ -13,6 +13,7 @@ $(document).on('ready', function(){
 
 function cargaAlgoIndex()
 {
+
     setTimeout(function(){$("#logu").addClass("lole"); setTimeout(function(){$("#entrada").fadeOut("slow",function(){location.href="juego.html"}); },600); },2000);
     $( window ).on( "orientationchange", function( event ) {if(event.orientation == "portrait") {setTimeout(function(){
             location.href="index.html";//$(".contenedorCorazon").css("-webkit-transform","rotate(0deg)").css("margin-left","0px"); 
@@ -22,12 +23,14 @@ function cargaAlgoIndex()
 }
 function cargaAlgo()
 {
+    $(".w100").css("width",$w-180);
+    $(".conteBotVerMas, input").width($w-12);
     $( window ).on( "orientationchange", function( event ) {if(event.orientation == "portrait") {setTimeout(function(){
             location.href="juego.html";//$(".contenedorCorazon").css("-webkit-transform","rotate(0deg)").css("margin-left","0px"); 
         },600); } else {setTimeout(function(){
             location.href="juego.html";//$(".contenedorCorazon").css("-webkit-transform","rotate(-90deg)").css("margin-left","-16px"); 
         },600); } });
-    $(".contenedorCorazon").width($w-180).css("margin","0 auto");
+    $(".contenedorCorazon").width($w).css("margin","0 auto");
     $(".conteBotVerMas").css({marginTop:$h-73, "position":"absolute"});
     $(".botonVerMas1").click(function(){
         $id = $(this).prop("id"); 
