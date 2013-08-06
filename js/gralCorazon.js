@@ -8,7 +8,8 @@ $w = parseInt($(window).width());
 $(document).on('ready', function(){
     $("#logu").css({marginTop:($h/2)-35, marginLeft:($w/2)-196});
     $(".w100").css("width",$w-180);
-    $(".conteBotVerMas, input").width($w-12);
+    $("input").width($w-12);
+    $(".conteBotVerMas").width($w-32);
 });
 
 function cargaAlgoIndex()
@@ -24,7 +25,6 @@ function cargaAlgo()
 {
     $(".loaad").css({marginTop:($h/2)-100});
     $(".w100").css("width",$w-180);
-    $(".conteBotVerMas, input").width($w-12);
     $( window ).on( "orientationchange", function( event ) {if(event.orientation == "portrait") {setTimeout(function(){
             location.href="juego.html";//$(".contenedorCorazon").css("-webkit-transform","rotate(0deg)").css("margin-left","0px"); 
         },600); } else {setTimeout(function(){
@@ -74,16 +74,12 @@ function cargaAlgo()
                     },"3000"); } else alert("Complete los nombres para saber tu coincidencia."); } }); $t = setTimeout(function(){corazonBlink(); },1000); 
 }
 
-function abreFbc()
-{
-//    $("#pop").prop('src','https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent("flyEn.com.ar"));
-}
 function corazonBlink(q) {if(q == "otro") {$('#corazonito').destroy(); $('#corazonito').removeClass("muyTriste").removeClass("muyFeliz").removeClass("feliz").removeClass("epa").removeClass("triste").addClass("blink"); } $('#corazonito').sprite({fps: 9, no_of_frames: 22, on_first_frame: function(obj) {obj.spState(1); }, on_last_frame: function(obj) {obj.spStop(); $t = setTimeout(function(){if(q == "triste") corazonTriste(); else obj.spStart(); },4000); } }); clearTimeout($t); } function corazonEpa()
 {
     $('#corazonito').destroy();
     $('#corazonito').removeClass("muyTriste").removeClass("muyFeliz").removeClass("feliz").removeClass("blink").removeClass("triste").addClass("epa");
     $('#corazonito').sprite({
-                            fps: 9, 
+                            fps: 99, 
                             no_of_frames: 32, 
                             on_first_frame: function(obj) {
                                 obj.spState(1); 
