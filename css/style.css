@@ -23,76 +23,73 @@
                 -moz-background-clip: padding !important; 
                 -o-background-clip: padding-box; /*background-clip: padding-box;*/ /* commented out due to Opera 11.10 bug */ -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; border-radius: 0.2em; /* IE hacks */ zoom: 1; *display: inline; } .botonVerMas1:hover, .botonVerMas1:focus, .botonVerMas1:active {border-color: #d60404; border-bottom-color: #2a65a0; text-decoration: none; text-shadow: -1px -1px 0 rgba(0,0,0,0.3); color: #fff; background-color: #d60404; background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ff1f44), to(#d60404)); background-image: -moz-linear-gradient(#ff1f44, #d60404); background-image: -o-linear-gradient(#ff1f44, #d60404); background-image: linear-gradient(#ff1f44, #d60404); } .contenedor{line-height: normal !important; background-color: rgba('0,0,0,0.3')} .contenedor div{ font-size:12px;font-family: tahoma; text-align: left;} #muestraContenido{background-color: rgba(0,0,0,0.6) !important;background: url("../template/fondo/fondo_1.jpg") repeat scroll -0 90px transparent !important;} .titulo {font-size: 27px !important; padding: 10px !important } .imagen img{-webkit-border-radius: 0 0 7px 3px} .texto {width: 98%; overflow-y: auto; overflow-x: hidden; margin-bottom:20px; padding-left: 7px !important; outline: none; cursor: -webkit-grab; padding-right: 7px !important; } .ui-loader-default{display: none !important;} #muestraRedSocial *{ line-height: normal !important;} .avisoEmail{font-size: .3em; width:100%;text-align: center; font-family: tahoma; margin-top: 0.6em !important;} .aviso{background-color: #ffffff; color: #000000 !important; padding: 8px !important; width: 82%; text-align: center; font-size: 18px; border-radius: 5px; border: none;} .ui-btn-inner{display: none;} .submitEnviar{margin-right: 1.7em !important; padding: .5em 1.5em !important; font-size: 14px;} .modifications{margin-left: 2em !important; padding: .5em 1em !important;} .modifications{border-color: #d60404 !important; border-bottom-color: #2a65a0 !important; text-decoration: none !important; text-shadow: -1px -1px 0 rgba(0,0,0,0.3) !important; color: #fff !important; background-color: #d60404 !important; background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ff1f44), to(#d60404)) !important; background-image: -moz-linear-gradient(#ff1f44, #d60404) !important; background-image: -o-linear-gradient(#ff1f44, #d60404) !important; background-image: linear-gradient(#ff1f44, #d60404) !important; border: 1px solid #ffffff !important;} .modifications.icon:before {content: ""; position: relative; top: 1px; float: left; width: 22px; height: 20px; margin: 0 0em 0 0em; background: url(gh-icons.png) 0 -154px no-repeat !important; } #muestraRedSocial{height:300px; -webkit-transition-property:-webkit-transform, left, top; -webkit-transition-duration:0.3s; -webkit-transform:translate3d(0px,5em,0); background:url('../template/fondo/pattern_40.jpg') repeat scroll 0 0 transparent !important;} .nicescroll-rails, .nicescroll-rails div{ left:-3px !important;} .footer{margin-top: -3.4em !important; position: relative; z-index: 20; font-size: 22px; width: 100% !important; border-top: 1px solid #3b3b3b; background: #3b3b3b; color: #fff; font-weight: bold; text-shadow: 0 -1px 1px #000; height: 2em; text-align: center; padding-top: 8px !important; background-image: -webkit-gradient(linear, left top, left bottom, from( #3c3c3c), to( #111)); background-image: -webkit-linear-gradient( #3c3c3c , #111 ); background-image: -moz-linear-gradient( #3c3c3c , #111 ); background-image: -ms-linear-gradient( #3c3c3c , #111 ); background-image: -o-linear-gradient( #3c3c3c , #111 ); background-image: linear-gradient( #3c3c3c , #111 ); line-height: normal !important; font-family: Arial; border-top:1px solid #f0f0f0; }
 .bot2{width:38%; border-left:1px outset #3b3b3b; border-right:1px inset #3b3b3b;margin-top: -3px !important;}
- .bot1{border-right:1px inset #3b3b3b;width:30% !important;} .bot3{width:68% !important;} .acomodaTextoIzquierda{margin-right: -40px !important;} .selectIndex{margin: 11em 0 1em -0.7em !important; width: 110%; height: 53px; webkit-border-radius: 4px; border-radius: 5px; font-size: 17px; font-weight: normal; font-family: arial; text-align: center;} .modif{margin: 0.6em 0 -52px -0.6em !important; width: 110%; font-weight: bold; font-size: 20px;} .bot1Volv{border-right:1px inset #3b3b3b;width:30% !important;} .bot2Volv{width:68% !important;} .dir{background: rgba(0,0,0,0.6) !important;} .floatSelect{background: url('../template/fondo/select.png') no-repeat 14px 0 transparent !important; width: 270px; height: 53px;}.swiper-scrollbar {width: 100%; height: 4px; border-radius: 10px; position: absolute; left:0; bottom:2px; -ms-touch-action: none; background: none } .swiper-scrollbar-drag {height: 100%; width: 100%; position: relative; background: rgba(0,0,0,0.5); border-radius: 10px; }
- ul#progress {
-    list-style: none;
-    width: 125px;
-    margin: 0 auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
+.bot1{border-right:1px inset #3b3b3b;width:30% !important;} .bot3{width:68% !important;} .acomodaTextoIzquierda{margin-right: -40px !important;} .selectIndex{margin: 11em 0 1em -0.7em !important; width: 110%; height: 53px; webkit-border-radius: 4px; border-radius: 5px; font-size: 17px; font-weight: normal; font-family: arial; text-align: center;} .modif{margin: 0.6em 0 -52px -0.6em !important; width: 110%; font-weight: bold; font-size: 20px;} .bot1Volv{border-right:1px inset #3b3b3b;width:30% !important;} .bot2Volv{width:68% !important;} .dir{background: rgba(0,0,0,0.6) !important;} .floatSelect{background: url('../template/fondo/select.png') no-repeat 14px 0 transparent !important; width: 270px; height: 53px;}.swiper-scrollbar {width: 100%; height: 4px; border-radius: 10px; position: absolute; left:0; bottom:2px; -ms-touch-action: none; background: none } .swiper-scrollbar-drag {height: 100%; width: 100%; position: relative; background: rgba(0,0,0,0.5); border-radius: 10px; }
+/* Demo 3 */
+
+.loadingdiv3 {
+    text-align: center;
+    height:150px;
 }
 
-ul#progress li {
-    /* Style your list */
-	float: left;
-    position: relative;
-    width: 15px;
-    height: 15px;
-    border: 1px solid #fff;
-    border-radius: 50px;
-    margin-left: 10px;
-    border-left: 1px solid #111;
-    border-top: 1px solid #111;
-    border-right: 1px solid #333;
-    border-bottom: 1px solid #333;
-    background: #000;
+.loadingdiv3 span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    margin: 50px auto;
+    background: #888888;
+    border-radius: 5px;
+    -webkit-animation: loading3 0.9s infinite alternate;
+    -moz-animation: loading3 0.9s infinite alternate;
+    box-shadow:1px 1px 1px #444444;
 }
 
-ul#progress li:first-child {
-    margin-left: 0;
-} /* Remove the margin first li element */
-
-.ball {
-    /* Style your ball and set the animation */
-	background-color: #2187e7;
-    background-image: -moz-linear-gradient(90deg, #2187e7 25%, #a0eaff);
-    background-image: -webkit-linear-gradient(90deg, #2187e7 25%, #a0eaff);
-    width: 15px;
-    height: 15px;
-    border-radius: 50px;
-    -moz-transform: scale(0);
-    -webkit-transform: scale(0);
-    -moz-animation: loading 1s linear infinite;
-    /*-webkit-animation: loading 1s linear infinite;*/
+.loadingdiv3 span:nth-of-type(2) {
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
 }
 
-.pulse {
-    /* Style your second ball to create the amazing effects */
-	width: 15px;
-    height: 15px;
-    border-radius: 30px;
-    border: 1px solid #00c6ff;
-    box-shadow: 0 0 5px #00c6ff;
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    -moz-transform: scale(0);
-    -webkit-transform: scale(0);
-    -webkit-animation: pulse 1s ease-out;
-    -moz-animation: pulse 1s ease-out;
+.loadingdiv3 span:nth-of-type(3) {
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
 }
 
-.lole{
-    -webkit-transform: scale(4);
-    -moz-transform: scale(4);
-    -ms-transform: scale(4);
-    -o-transform: scale(4));        
-        transform: scale(4);
-    opacity:0;
-    -webkit-transition: all 400ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
-    -moz-transition: all 400ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
-    -ms-transition: all 400ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
-    -o-transition: all 400ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
-    transition: all 400ms cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
+.loadingdiv3 span:nth-of-type(4) {
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
 }
-/* Control Layers */ #layer1 {-moz-animation-delay: 0.5s; -webkit-animation-delay: 0.5s; } #layer2 {-moz-animation-delay: 1s; -webkit-animation-delay: 1s; } #layer3 {-moz-animation-delay: 1.5s; -webkit-animation-delay: 1.5s; } #layer4 {-moz-animation-delay: 2s; -webkit-animation-delay: 2s; } #layer5 {-moz-animation-delay: 2.5s; -webkit-animation-delay: 2.5s; } #layer7 {-moz-animation-delay: 1.5s; -webkit-animation-delay: 1.5s; } #layer8 {-moz-animation-delay: 2s; -webkit-animation-delay: 2s; } #layer9 {-moz-animation-delay: 2.5s; -webkit-animation-delay: 2.5s; } #layer10 {-moz-animation-delay: 3s; -webkit-animation-delay: 3s; } #layer11 {-moz-animation-delay: 3.5s; -webkit-animation-delay: 3.5s; } @-moz-keyframes loading {0% {-moz-transform: scale(0,0); } 100% {-moz-transform: scale(1,1); }; } @-webkit-keyframes loading {0% {-webkit-transform: scale(0,0); } 100% {-webkit-transform: scale(1,1); }; } @-moz-keyframes pulse {0% {-moz-transform: scale(0); opacity: 0; } 10% {-moz-transform: scale(1); opacity: 0.5; } 50% {-moz-transform: scale(1.75); opacity: 0; } 100% {-moz-transform: scale(0); opacity: 0; }; } @-webkit-keyframes pulse {0% {-webkit-transform: scale(0); opacity: 0; } 10% {-webkit-transform: scale(1); opacity: 0.5; } 50% {-webkit-transform: scale(1.75); opacity: 0; } 100% {-webkit-transform: scale(0); opacity: 0; }; }
+
+.loadingdiv3 span:nth-of-type(5) {
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+}
+
+@-webkit-keyframes loading3 {
+  0% {
+    width: 10px;
+    height: 10px;
+    -webkit-transform: translateY(0);
+    opacity:0.1;
+  }
+  100% {
+    width: 24px;
+    height: 24px;
+    -webkit-transform: translateY(-21px);
+    opacity:1;
+  }
+}
+
+@-moz-keyframes loading3 {
+  0% {
+    width: 10px;
+    height: 10px;
+    -moz-transform: translateZ(0);
+    opacity:0.1;
+  }
+  100% {
+    width: 24px;
+    height: 24px;
+    -moz-transform: translateZ(-21px);
+    opacity:1;
+  }
+}
