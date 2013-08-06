@@ -8,7 +8,7 @@ $w = parseInt($(window).width());
 $(document).on('ready', function(){
     $("#logu").css({marginTop:($h/2)-35, marginLeft:($w/2)-196});
     $(".w100").css("width",$w-180);
-    $("input").width($w-92);
+    $("input").width($w-72);
     $(".conteBotVerMas").width($w-32);
     $("#topCorazon").css({marginTop:($h/2)-210, marginLeft:($w/2)-130})
 });
