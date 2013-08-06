@@ -23,17 +23,16 @@
 
 <body onload="cargaAlgo()" style="overflow:auto !important;">
     <a href="#"
-      class="oculto" 
-      id="compartirFbc"  
+      class="oculto" style="height: 106px; width: 100%;float:left;" id="compartirFbc"
       onclick="
         window.open(
           'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(http://www.fly-en.com), 
           'facebook-share-dialog', 
           'width=626,height=436'); 
-        return false;">
-      <img src="template/fondo/share.png" alt="Compartir en facebook" />
-    </a>
-    <!-- <div class="volver botonVerMas1">volver</div> -->
+        return false;"> <img src="template/fondo/share.png" alt="Compartir en facebook" /> </a>
+    <div class="loaad">
+      
+    </div>
     <br>
     <div class="contenedorCorazon">
           <form name="compara" class="floatLeft w100" style="z-index:4;margin-bottom:42px;">
@@ -48,15 +47,8 @@
               <div class="floatRight blink" id="corazonito" style="margin-top:-40px;"></div>
           </div>
           <div class="clearBoth"></div>
-          <div class="loadingdiv3 loaad">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-          </div>
-          <div class="margin0auto w100 conteBotVerMas" style="top:0;left:0;margin-left:12px;">
-            <div class="floatLeft botonVerMas1 calcular textAlignCenter" style="font-size:1.3em; width:288px; !important;padding:19px !important;">
+          <div class="margin0auto  conteBotVerMas" style="top:0;left:0;margin-left:12px;">
+            <div class="floatLeft w100 botonVerMas1 calcular textAlignCenter" style="font-size:1.3em; width:288px; !important;padding:19px !important;">
               Calcular
             </div>
           </div>
